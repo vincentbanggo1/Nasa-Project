@@ -1,13 +1,11 @@
-const launch = new Map(
-
-);
+const launches = new Map();
 
 
 const launch = {
   flightNumber: 100,
   mission:'Kepler Exploration X',
   rocket:'Explorer IS1',
-  launchesDate: newDate('December 27, 2030'),
+  launchesDate: new Date('December 27, 2030'),
   destination: 'Kepler-442 b',
   customer: ['Vincent','NASA'],
   upcoming: true,
@@ -16,7 +14,11 @@ const launch = {
 
 launches.set(launch.flightNumber, launch);
 
+function getAllLaunches() {
+ return Array.from(launches.values());
+}
+
 module.exports = {
-launches,
+getAllLaunches,
 
 };
