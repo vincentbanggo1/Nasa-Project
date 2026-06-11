@@ -11,6 +11,7 @@
     "client": "npm run start --prefix client",
     "watch": "concurrently \"npm:server\" \"npm:client\"",
     "deploy": "npm run build --prefix client && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
     "test": "npm run test --prefix server && npm run test --prefix client"
   },
   "devDependencies": {
@@ -27,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/vincentbanggo1/Nasa-Project/issues"
   },
-  "homepage": "https://github.com/vincentbanggo1/Nasa-Project#readme"
+  "homepage": "https://github.com/vincentbanggo1/Nasa-Project#readme",
+  "dependencies": {
+    "mongoose": "^9.7.0"
+  }
 }
